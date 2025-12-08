@@ -82,7 +82,7 @@ function colorChangeHandler () {
   colorChange.classList.add('colorchange')
 }
 
-// reset kleur bij focus out
+// reset kleur bij focus out      
 
 colorChange.addEventListener('focusout', colorChangeHandlerReset)
 
@@ -90,5 +90,33 @@ function colorChangeHandlerReset () {
   colorChange.classList.remove('colorchange')
 }
 
-// nummer 5 
+// nummer 5
+
+let changeText = document.querySelector('a[href="#fix"]');
+
+changeText.addEventListener('mouseover', textChangeHandler)
+
+function textChangeHandler () {
+  changeText.textContent="poep in je broek"
+}
+
+changeText.addEventListener('click', textRevertHandler) 
+
+function textRevertHandler () {
+  changeText.textContent="Wauw! originele text"
+}
+
+
+
+// nummer 6
+
+let rotateNow = document.querySelector('a[href="#the"]')
+
+rotateNow.addEventListener('mouseout', rotateNowHandler)
+
+function rotateNowHandler () {
+  rotateNow.classList.toggle('rotate')
+}
+
+rotateNow.addEventListener('animationend', rotateNowHandler)
 

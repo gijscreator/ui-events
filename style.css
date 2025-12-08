@@ -171,6 +171,21 @@ a[href="#design"] {
   }
 }
 
+.rotate {
+  animation-name: rotate;
+  animation-iteration-count: 2;
+  animation-duration: 1s;
+}
+
+@keyframes rotate {
+  0%, 10%, 30%, 50%, 70%, 100% {
+    rotate: -30deg;
+  }
+
+  20%, 40%, 60%, 80%, 90% {
+    rotate: 30deg;
+  }
+}
 
 
 
