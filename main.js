@@ -21,7 +21,6 @@ designLink.addEventListener('animationend', jumpHandler)
 
 
 
-
 // Ga zelf verder met de overige elementen, aan de hand van de instructies
 // Maak bijvoorbeeld een scale animatie als je op de Frontend link klikt
 
