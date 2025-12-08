@@ -119,3 +119,20 @@ function rotateNowHandler () {
 
 rotateNow.addEventListener('animationend', rotateNowHandler)
 
+// nummer 7 
+
+let mouseClick = document.querySelector('a[href="#flow"]')
+
+mouseClick.addEventListener('mousedown', mouseClickHandlerDown)
+
+function mouseClickHandlerDown () {
+  mouseClick.classList.toggle('mouseclick')
+}
+
+mouseClick.addEventListener('mouseup', mouseClickHandlerUp)
+
+function mouseClickHandlerUp () {
+  mouseClick.classList.toggle('mouseclick')
+}
+
+mouseClick.addEventListener('animationend', mouseClickHandlerDown)
