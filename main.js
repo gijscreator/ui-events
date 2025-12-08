@@ -154,7 +154,7 @@ function clickedKeyHandler(event) {
     keyUp.classList.add('wrongkey');
     keyUp.textContent = "jammer joh verkeerde knop";
 
-    // 2 seconden wachten en dan weer terug naar origineel
+    // 2 seconden wachten en dan weer terug naar user
     setTimeout(() => {
       keyUp.classList.remove('wrongkey');
       keyUp.textContent = "User";
@@ -162,3 +162,20 @@ function clickedKeyHandler(event) {
   }
 }
 
+// nummer 9 
+
+let ballon = document.querySelector('a[href="#interface"]')
+
+ballon.addEventListener('keydown', ballonHandler)
+
+function ballonHandler () {
+  ballon.classList.toggle('ballon')
+}
+
+ballon.addEventListener('animationend', ballonHandler)
+
+
+// nummer 10 kan ik nu niet doen
+
+
+// nummer 11
