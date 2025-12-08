@@ -204,6 +204,35 @@ a[href="#design"] {
 }
 
 
+.keyup {
+  animation-name: rightkey;
+  animation-iteration-count: 2;
+  animation-duration: 1s;
+}
+
+@keyframes rightkey {
+  20%, 50% {
+    background-color: green;
+  }
+
+  0%, 100% {
+    background-color: purple;
+  }
+}
 
 
+.wrongkey {
+  animation-name: wrongkey;
+  animation-iteration-count: infinite;
+  animation-duration: 1s;
+}
 
+@keyframes wrongkey {
+  20%, 50% {
+    background-color: red;
+  }
+
+  0%, 100% {
+    background-color: orange;
+  }
+}

@@ -136,3 +136,29 @@ function mouseClickHandlerUp () {
 }
 
 mouseClick.addEventListener('animationend', mouseClickHandlerDown)
+
+// nummer 8
+
+let keyUp = document.querySelector('a[href="#user"]')
+
+keyUp.addEventListener('keyup', clickedKeyHandler)
+
+function clickedKeyHandler(event) {
+
+  // mooie knoppies
+  if (['r', 'a', 'b', 'o', 'p'].includes(event.key)) {
+    keyUp.classList.toggle('keyup');
+  } 
+  else {
+    // foutmelding jammer joh
+    keyUp.classList.add('wrongkey');
+    keyUp.textContent = "jammer joh verkeerde knop";
+
+    // 2 seconden wachten en dan weer terug naar origineel
+    setTimeout(() => {
+      keyUp.classList.remove('wrongkey');
+      keyUp.textContent = "User";
+    }, 2000);
+  }
+}
+
