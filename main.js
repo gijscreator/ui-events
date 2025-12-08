@@ -178,4 +178,7 @@ ballon.addEventListener('animationend', ballonHandler)
 // nummer 10 kan ik nu niet doen
 
 
+
 // nummer 11
+
+
