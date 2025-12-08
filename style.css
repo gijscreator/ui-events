@@ -87,7 +87,7 @@ a[href="#design"] {
 
 .scale {
   animation-name: scale;
-  animation-iteration-count: 2;
+  animation-iteration-count: 12;
   animation-duration: .5s;
   
 }
@@ -104,13 +104,13 @@ a[href="#design"] {
 }
 
 
-.jump {
-  animation-name: jump;
-  animation-iteration-count: 2;
+.translate {
+  animation-name: translate;
+  animation-iteration-count: 12;
   animation-duration: .5s;
 }
 
-@keyframes jump {
+@keyframes translate {
   0% {
     translate: 0 0;
   }
@@ -130,4 +130,31 @@ a[href="#design"] {
     translate: 0 0;
   }
 }
+
+.dblclick {
+  animation-name: dblclick;
+  animation-iteration-count: 2;
+  animation-duration: .5s;
+}
+
+@keyframes dblclick {
+  0% {
+    translate: 0em 0em;
+  }
+
+  40% {
+    translate: 2em 0em;
+  }
+
+  80% {
+    translate: -2em 0em;
+  }
+
+  100% {
+    translate: 0em 0em;
+  }
+}
+
+
+
 

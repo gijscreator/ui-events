@@ -34,6 +34,8 @@ designLink.addEventListener('animationend', jumpHandler)
 // Stap 3: (Callback functie met) classList (.toggle(), .add(), etc.)
 // scaleLink.classList.toggle...
 
+// nummer 1
+
 let scaleLink = document.querySelector('a[href="#frontend"]')
 
 scaleLink.addEventListener('click', scaleHandler)
@@ -42,6 +44,7 @@ function scaleHandler () {
   scaleLink.classList.toggle('scale')
 }
 
+scaleLink.addEventListener('animationend', scaleHandler)
 
 
 // nummer 2 
@@ -51,5 +54,22 @@ let transLate = document.querySelector('a[href="#and"]')
 transLate.addEventListener('click', translateHandler)
 
 function translateHandler () {
-  transLate.classList.toggle('jump')
+  transLate.classList.toggle('translate')
 }
+
+scaleLink.addEventListener('animationend', translateHandler)
+
+
+// nummer 3
+
+let dblclick = document.querySelector('a[href="#development"]')
+
+dblclick.addEventListener('dblclick', dblClickHandler)
+
+function dblClickHandler () {
+  dblclick.classList.toggle('dblclick')
+}
+
+dblclick.addEventListener('animationend', dblClickHandler)
+
+// nummer 4
