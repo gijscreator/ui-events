@@ -155,6 +155,24 @@ a[href="#design"] {
   }
 }
 
+.colorchange {
+  animation-name: background-change;
+  animation-iteration-count: 3;
+  animation-duration: 2s;
+}
+
+@keyframes background-change {
+  0%, 10%, 30%, 50%, 70%, 100% {
+    background-color: #7ce7c9;
+  }
+
+  20%, 40%, 60%, 80%, 90% {
+    background-color:#9d7beb;
+  }
+}
+
+
+
 
 
 

@@ -73,3 +73,22 @@ function dblClickHandler () {
 dblclick.addEventListener('animationend', dblClickHandler)
 
 // nummer 4
+
+let colorChange = document.querySelector('a[href="#sprint-5"]')
+
+colorChange.addEventListener('focusin', colorChangeHandler)
+
+function colorChangeHandler () {
+  colorChange.classList.add('colorchange')
+}
+
+// reset kleur bij focus out
+
+colorChange.addEventListener('focusout', colorChangeHandlerReset)
+
+function colorChangeHandlerReset () {
+  colorChange.classList.remove('colorchange')
+}
+
+// nummer 5 
+
