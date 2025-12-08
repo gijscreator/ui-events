@@ -41,3 +41,15 @@ scaleLink.addEventListener('click', scaleHandler)
 function scaleHandler () {
   scaleLink.classList.toggle('scale')
 }
+
+
+
+// nummer 2 
+
+let transLate = document.querySelector('a[href="#and"]')
+
+transLate.addEventListener('click', translateHandler)
+
+function translateHandler () {
+  transLate.classList.toggle('jump')
+}
