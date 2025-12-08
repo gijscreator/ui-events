@@ -175,8 +175,30 @@ function ballonHandler () {
 ballon.addEventListener('animationend', ballonHandler)
 
 
-// nummer 10 kan ik nu niet doen
+// nummer 10
 
+
+let tekst = document.querySelector('a[href="#events"]')
+
+let huidigeGrootte = 40; 
+
+tekst.addEventListener('wheel', (event) => {
+
+    event.preventDefault();
+
+    if (event.deltaY > 0) {
+
+        huidigeGrootte--;
+    } else {
+
+        huidigeGrootte++;
+    }
+
+    if (huidigeGrootte < 10) huidigeGrootte = 10;
+    if (huidigeGrootte > 100) huidigeGrootte = 100;
+
+    tekst.style.fontSize = huidigeGrootte + 'px';
+});
 
 
 // nummer 11
