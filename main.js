@@ -166,7 +166,7 @@ function clickedKeyHandler(event) {
 
 let ballon = document.querySelector('a[href="#interface"]')
 
-ballon.addEventListener('keydown', ballonHandler)
+ballon.addEventListener('mousedown', ballonHandler)
 
 function ballonHandler () {
   ballon.classList.toggle('ballon')
@@ -205,15 +205,22 @@ tekst.addEventListener('wheel', (event) => {
 
 let gradient = document.querySelector('a[href="#interaction"]')
 
-gradient.addEventListener('mouseover', gradientHandler)
-gradient.addEventListener('mouseout', gradientHandleradd)
+gradient.addEventListener('mousemove', gradientHandler)
 
-function gradientHandler () {
-  gradient.classList.add('gradient')
+function gradientHandler (e) {
+
+  gradient.classList.add('interaction')
+  let mouseX = e.offsetX;
+  let mouseY = e.offsetY;
+
+  gradient.style.setProperty("--x", mouseX + "px")
+  gradient.style.setProperty("--y", mouseY + "px")
 }
 
-function gradientHandleradd () {
-  gradient.classList.remove('gradient')
+gradient.addEventListener('mouseout', removeClass)
+
+function removeClass () {
+  gradient.classList.remove('interaction')
 }
 
 // nummer 12
@@ -231,5 +238,3 @@ function fallHandler (vallen) {
   vallen.stopPropagation();
   falldown.forEach(linkje => linkje.classList.toggle('fall'));
 }
-
-notMe.addEventListener('animationend', fallHandler);

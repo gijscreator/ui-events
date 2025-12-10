@@ -264,6 +264,19 @@ a[href="#design"] {
   }
 }
 
+.interaction {
+
+  --x: .5;
+  --y: .5;
+
+  background: radial-gradient(
+    circle at var(--x) var(--y),
+    white,
+    black 25%
+  );
+}
+
+
 
 
 .fall {
