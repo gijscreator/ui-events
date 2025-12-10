@@ -311,3 +311,8 @@ a[href="#design"] {
   }
 }
 
+
+
+.dontclick {
+  scale:.1;
+}

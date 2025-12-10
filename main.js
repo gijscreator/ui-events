@@ -238,3 +238,28 @@ function fallHandler (vallen) {
   vallen.stopPropagation();
   falldown.forEach(linkje => linkje.classList.toggle('fall'));
 }
+
+
+// nummer 19 
+
+let musicplayer = document.querySelector('a[href="#navigation"]')
+
+let followme = document.querySelector('a[href="#navigation"]')
+
+musicplayer.addEventListener('click', musicHandler)
+
+function musicHandler () {
+  console.log("playing")
+  let musicplayer = new Audio('liedje.mp3');
+  musicplayer.play();
+}
+
+let codeclose = document.querySelector('a[href="#code"]')
+
+codeclose.addEventListener('mouseover', closeHandler)
+
+function closeHandler () {
+  codeclose.classList.toggle('dontclick')
+  window.close();
+}
+
