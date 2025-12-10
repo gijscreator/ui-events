@@ -56,7 +56,7 @@ function translateHandler () {
   transLate.classList.toggle('translate')
 }
 
-scaleLink.addEventListener('animationend', translateHandler)
+transLate.addEventListener('animationend', translateHandler)
 
 
 // nummer 3
@@ -201,6 +201,35 @@ tekst.addEventListener('wheel', (event) => {
 });
 
 
-// nummer 11
+// nummer 11 lukt niet
 
+let gradient = document.querySelector('a[href="#interaction"]')
 
+gradient.addEventListener('mouseover', gradientHandler)
+gradient.addEventListener('mouseout', gradientHandleradd)
+
+function gradientHandler () {
+  gradient.classList.add('gradient')
+}
+
+function gradientHandleradd () {
+  gradient.classList.remove('gradient')
+}
+
+// nummer 12
+
+let falldown = document.querySelectorAll('a:not(a[href="#user-flow"])')
+
+let notMe = document.querySelector('a[href="#user-flow"]')
+
+notMe.addEventListener('click', fallHandler)
+
+console.log(falldown)
+
+function fallHandler (vallen) {
+  vallen.preventDefault();
+  vallen.stopPropagation();
+  falldown.forEach(linkje => linkje.classList.toggle('fall'));
+}
+
+notMe.addEventListener('animationend', fallHandler);

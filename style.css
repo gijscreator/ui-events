@@ -262,5 +262,39 @@ a[href="#design"] {
   100% {
     scale: 1.8
   }
-  
 }
+
+
+
+.fall {
+  animation-name: falling;
+  animation-iteration-count: 1;
+  animation-duration: 5s;
+}
+
+@keyframes falling {
+  20% {
+    transform:translateY(-30vh)
+    rotate(10deg);
+  }
+  30% {
+    transform:translatex(-50vh)
+    rotate(20deg);
+  }
+  50% {
+    transform:translateY(-60vh)
+    rotate(40deg);
+  }
+  60% {
+    transform:translateY(-50vh);
+    transform:translatex(10vw)
+    rotate(80deg);
+  }
+
+  100% {
+    transform:translateY(-200vh);
+    transform:translatex(-100vw)
+    rotate(8000deg);
+  }
+}
+
