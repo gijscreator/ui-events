@@ -282,7 +282,7 @@ a[href="#design"] {
 .fall {
   animation-name: falling;
   animation-iteration-count: 1;
-  animation-duration: 5s;
+  animation-duration: 3s;
 }
 
 @keyframes falling {
@@ -316,3 +316,39 @@ a[href="#design"] {
 .dontclick {
   scale:.1;
 }
+
+
+
+/* wireflow */
+
+a[href="#wireflow"] {
+  overflow: hidden;
+  position: relative;
+  --gradient-position: 0%;
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -200%;
+    width: 200%;
+    height: 200%;
+    background: linear-gradient(90deg,
+        transparent 20%,
+        transparent 10%,
+        green);
+    transition: 1s linear;
+    opacity: 0;
+    pointer-events: none;
+  }
+
+  &::before {
+    opacity: 1;
+    transform: translatex(var(--gradient-position));
+  }
+}
+
+.ten-clicks {
+  background-color: green;
+}
+
